@@ -20,7 +20,6 @@ html , body {
 .logo1 {
     width: 50%;
     height: auto;
-   
     background-image: url(../Site-Regras_de_Truco/Imagens/bg-cartas.jpg);
     background-repeat: no-repeat;
     background-size: 820px 600px;  
@@ -36,7 +35,7 @@ html , body {
     list-style-type: none; 
 }
 
-h1{
+.logo1 h1{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -61,6 +60,7 @@ ul {
       font-size: 2em;
       font-weight: bold;
       color: #000;
+      text-decoration: none;
   }
 
   a:hover {
@@ -70,11 +70,34 @@ ul {
       height: 100px;
   }
 
-.menu1 ul li a {
-    text-decoration: none;
+
+h2 {
+    padding-right: 4px;
+    padding-left: 10px;
+    margin: 10px 0px;
+    font-family: 'Ravi Prakash', cursive;
+    font-size: 5rem;
+    color: rgb(192, 33, 33);
+    text-align: center;
 }
 
+p{
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: center;
+}
 
+.conteudo {
+   display: block;
+   height: 510px;
+   
+}
+
+.imagem {
+    text-align: center;
+    margin: 50px;
+    
+}
 
 
 
