@@ -1,0 +1,141 @@
+:root {
+    --color: #000000;
+    --fonte: rgba(197, 30, 24, 0.746)
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 20px;
+    color: white;
+    background: var(--color);
+}
+
+h1 {
+    color: var(--fonte);
+    font-size: 40px;
+    margin-left: 30px;
+    letter-spacing: 6px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    margin:0 20px;
+    color: whitesmoke;
+}
+
+.capa {
+   display: flex;
+   justify-content: space-between;
+   padding-left: 40px;
+   padding-bottom:150px;
+   background: #161615; 
+}
+
+.conteudo-capa {
+    display: block;
+    margin-top: 7%;
+    margin-left: 50px;
+}
+
+.conteudo-capa .N {
+    font-size: 1.7em;
+    color: var(--fonte);
+    margin-right: 2px;
+}
+
+.conteudo-capa .serie {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: bold;
+    color: #b1a3a0;  
+}
+
+.conteudo-capa h2 {
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: whitesmoke;
+    margin-bottom: 40px;
+}
+
+.conteudo-capa h4 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.conteudo-capa ul li {
+    list-style: none;
+    display: inline;
+   margin: 0 12px;
+   font-size: 0.9em;
+   color:  #998d89;
+}
+
+.conteudo-capa ul li:nth-child(1) {
+    margin-left: 0px;
+}
+
+.texto {
+   margin-top: 25px;
+}
+
+.texto p:nth-child(1) {
+    margin-bottom: 25px;
+}
+
+.texto span {
+    color:  #998d89;
+}
+
+.botao {
+    width: 250px;
+    height: 50px;
+    background: black;
+    color: #ffff;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    margin-top: 20px;
+    margin-right: 15px;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.botao:hover {
+    background: #ffff;
+    color:black;
+    cursor: pointer;
+}
+
+.botao i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.imagem img {
+    width: 50vw;
+    height: 92vh; 
+}
+
+.box-filmes {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
