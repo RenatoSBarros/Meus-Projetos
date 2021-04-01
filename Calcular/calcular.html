@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {margin: 0px; padding: 0px; background-color: rgb(205, 205, 236);}
+        .container {display: inline-block; text-align: center; background-color:rgb(76, 76, 204) ; margin-left: 500px; margin-top: 20px; width: 300px; height: 65vh;}
+        input {margin-bottom: 10px; height: 20px; width: 200px;}
+        button {width: 100px; height: 30px; border: none; border-radius: 5px; cursor: pointer; margin: 20px;}
+        button:hover{background-color: rgb(170, 169, 169);}
+        h1 {font-family: Arial, Helvetica, sans-serif; font-size: 40px; color: aliceblue;}
+        p {font-family: Arial, Helvetica, sans-serif; font-size: 2em; font-weight: bolder; color: aliceblue; margin-bottom: 10px; margin-top: 10px;}
+    </style>
+    <title>Calcular</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Calcular</h1>
+        <div>
+            <input type="text" class='num1'  placeholder="Digite o primeiro número">
+        </div>
+        <p>+</p>
+        <div>
+            <input type="number" class="num2"  placeholder="Digite o segundo número">
+        </div>
+        <div>
+            <button onclick="somar()">Resultado</button>
+        </div>
+        <p class="resp"></p>
+    </div>
+
+    <script type="text/javascript">
+        function somar() {
+            var num1 = document.querySelector(".num1").value;
+            var num2 = document.querySelector(".num2").value;
+            var resp = parseInt(num1) + parseInt(num2);
+            document.querySelector(".resp").innerHTML = resp;
+        }
+
+    </script>
+
+</body>
+</html>
