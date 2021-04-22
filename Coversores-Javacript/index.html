@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+	<title>Teste-Javascript</title>
+	<meta charset="utf-8">
+	<style>
+		body {
+
+		}
+		h1 {
+			display: flex;
+			flex-direction: column;
+			font-size: 40px;
+			text-transform: uppercase;
+			text-align: center;
+			margin-top: 20px;
+			margin-bottom: 10px;
+			
+		}
+
+		.container {
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			
+		}
+
+		#botao1 {
+			width: 100px;
+			height: 50px;
+			margin-top: 50px;
+			margin-right: 20px;
+			align-items: center;
+		}
+		#botao2 {
+			width: 100px;
+			height: 50px;
+			margin-top: 50px;
+			margin-right: 20px;
+			align-items: center;
+		}
+		#botao3 {
+			width: 100px;
+			height: 50px;
+			margin-top: 50px;
+			margin-right: 20px;
+			align-items: center;
+		}
+
+		.botaoS {
+			width: 150px;
+			height: 50px;
+			margin-top: 50px;
+			margin-right: 20px;				
+			align-items: center;
+		}	
+
+		button {
+			cursor: pointer;
+			margin-top: -10px;
+		}
+
+		.conversor {
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.red{
+			background: #ef5350;
+		}	
+
+		span {
+			background: #ef5350;
+		}
+
+		span.green {
+			background: #00e676;
+		}
+
+		strong.green {
+			background: #00e676;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h1>Teste das mensagens</h1>
+
+	<section class="container"> 
+		<button id="botao1" onclick="alert('Você clicou no 1º botão')">Botão 1</button>
+		<button id="botao2" onclick="alert('Você clicou no 2º botão')">Botão 2</button>
+		<button id="botao3" onclick="alert('Você clicou no 3º botão')">Botão 3</button>
+	</section>
+	<br>
+	<br>
+	<hr>
+
+	<h1>Boas Vindas</h1>
+
+	<section class="container">
+		<button class="botaoS" onclick="nameAge(prompt)">Inicie o desafio</button>
+		<script type="text/javascript">
+			function nameAge() {
+				let name = prompt('Qual é o seu nome ?')
+				let age = prompt('Quantos anos você tem ?')
+				alert(' Acabei de conhecer ' + name + ' , que tem ' + age + ' anos de idade')
+			}
+		</script>
+	</section>
+	<br>
+	<br>
+	<hr>
+
+	<h1>antes e depois</h1>
+
+	<section class="container">
+		<button class="botaoS" onclick="antSuc(prompt)">Antecessor e Sucessor</button>
+		<script  type="text/javascript">
+			function antSuc() {
+				let n = prompt('Digite um número qualquer :')
+				alert('Antes de ' + n + ' , temos o nómero ' + --n + ' . \nDepois de ' + ++n + ' temos o número ' + ++n )
+			}
+		</script>	
+	</section>
+	<br>
+	<br>
+	<hr>
+
+	<h1>Calculando o troco</h1>
+
+	<section class="container">
+		<button class="botaoS" onclick="calcTroco(prompt)">Comprar Produto</button>
+		<script  type="text/javascript">
+			function calcTroco() {
+				let prod = prompt('Qual produto você está comprando ?')
+				let valor = prompt('Quanto custa o(a) ' + prod + ' que você está comprando ?')
+				let din = prompt('Qual foi o valor que você deu para comprar o(a) ' + prod + ' ?')
+				let troco = din - valor
+				alert('Você comprou um(a) ' + prod + ' , que custou R$ ' + valor + ' . \nDeu R$ ' + din + ' em dinheiro e vai receber R$ ' + troco + ' de troco. \nVolte sempre ! ' )
+			}
+		</script>	
+	</section>
+	<br>
+	<br>
+	<hr>
+
+	<h1>Conversor de medidas</h1>
+
+	<section class="container">
+		<div class="conversor">
+			<button class="botaoS" onclick="conversordeMedidas(prompt)">Converter</button>
+			<h3 class="resultado">Clique no botão acima para iniciar.</h3>
+			<h4 class="km"></h4>
+			<h4 class="hec"></h4>
+			<h4 class="deca"></h4>
+			<h4 class="deci"></h4>
+			<h4 class="cent"></h4>
+			<h4 class="mili"></h4>
+		</div>
+			
+		<script  type="text/javascript">
+			function conversordeMedidas() {
+				let m = prompt('Digite uma distância em metros(m) :');
+				let resultado = document.querySelector(".resultado").innerHTML = 'A distância de ' + m + ' metros , corresponde a...';
+				let km = parseFloat(m) / parseFloat(1000);
+				document.querySelector(".km").innerHTML = km + ' quilômetros(Km)';
+				let hec = parseFloat(m) / parseFloat(100);
+				document.querySelector(".hec").innerHTML = hec + ' hectômetros(Hm)';
+				let deca = parseFloat(m) / parseFloat(10);
+				document.querySelector(".deca").innerHTML = deca + ' decâmetros(Dam)';
+				let deci = parseFloat(m) / parseFloat(0.1);
+				document.querySelector(".deci").innerHTML = deci + ' decímetros(dm)';
+				let cent = parseFloat(m) / parseFloat(0.01);
+				document.querySelector(".cent").innerHTML = cent + ' centímetros(cm)';
+				let mili = parseFloat(m) / parseFloat(0.001);
+				document.querySelector(".mili").innerHTML = mili + ' milímetros(mm)';
+			}		
+		</script>
+		<h2></h2>	
+	</section>
+	<br>
+	<br>
+	<hr>
+
+	<h1>Conversor de Temperaturas</h1>
+
+	<section class="container">
+		<div class="conversor">
+			<button class="botaoS" onclick="conversorDeTemperatura(prompt)">Converter</button>
+			<h3 class="resultado2"><strong>Clique no botão acima para iniciar.</strong></h3>
+			<h4 class="kel"></h4>
+			<h4 class="fah"></h4>
+		</div>
+
+		<script type="text/javascript">
+			function conversorDeTemperatura() {
+				let cel = prompt('Digite uma temperatura em &degC (Celsius)');
+				let resultado2 = document.querySelector(".resultado2").innerHTML = 'A temperatura de ' + cel + ' &degC , corresponde a... ';
+				let kel = parseFloat(cel) + parseFloat(273.15).toFixed(2);
+				document.querySelector(".kel").innerHTML = kel + ' &degK (Kelvin)';
+				let fah = (parseFloat(cel) * parseFloat(1.8)) + parseFloat(32).toFixed(2);
+				document.querySelector(".fah").innerHTML = fah + '  &degF (Fahrenheit)';
+			}
+		</script>
+    </section>
+	<br>
+	<br>
+	<hr>
+
+	<h1>Conversor R$ &rarr; US$</h1>
+
+	<section class="container"></section>
+	<div class="conversor">
+		<button class="botaoS" onclick="conversorDeMoedas(prompt)">Converter</button>
+		<h3 class="resultado2"><strong>Clique no botão acima para iniciar.</strong></h3>
+		<div class="dolares"></div>
+	</div>
+
+		<script type="text/javascript">
+			function conversorDeMoedas() {
+				let dolar = prompt('Antes de mais nada , quanto está a cotação do dolar agora ?')
+				let real = prompt('Quantos R$ você tem na carteira ?')
+				let dolares = parseFloat(real).toFixed(2) / parseFloat(dolar).toFixed(2)
+				document.querySelector(".dolares").innerHTML = 'Com R$ ' + real + ' conseguimos comprar US$ ' + dolares.toFixed(2)
+			}	
+		</script>
+	<br>
+	<br>
+	<hr>
+
+	<h1>Calcular desconto</h1>	
+
+	<section class="container"></section>
+	<div class="conversor">
+		<button class="botaoS" onclick="calcularDesconto(prompt)">desconto de 10%</button>
+		<h3 class="resultado3"><strong>Clique no botão acima para iniciar.</strong></h3>
+		<div class="preco"></div>
+		<div class="desconto"></div>
+		<div class="pagamento"></div>
+	</div>
+
+	<script type="text/javascript">
+		function calcularDesconto() {
+			let produto = prompt('Qual o produto que você está comprando ?')
+			let preco = prompt('Qual o preço do(a) ' + produto + ' ? ')
+			document.querySelector(".resultado3").innerHTML = 'Calculando um desconto de 10% para o(a)	' + produto + '.'
+			document.querySelector(".preco").innerHTML = 'O preço original era R$' + preco + '.'
+			let desconto = parseFloat(preco) * parseFloat(0.1)
+			document.querySelector(".desconto").innerHTML = 'Você acaba de ganhar R$' + desconto + ' de desconto (-10%).'
+			let pagamento = parseFloat(preco) - parseFloat(desconto)
+			document.querySelector(".pagamento").innerHTML = 'No fim , você vai pagar R$' + pagamento + ' no produto'
+		}
+
+	</script>
+	<br>
+	<br>
+	<hr>
+
+	<h1>Reajuste salarial</h1>
+
+	<section class="container">
+		<div class="conversor">
+			<button class="botaoS" onclick="reajustarSalario(prompt)">Reajustar Salário</button>
+			<h3 class="resultado4"><strong>Clique no botão acima para iniciar.</strong></h3>
+			<div class="salario"></div>
+			<div class="aumento"></div>
+			<div class="total"></div>
+		</div>
+		
+	</section>
+
+	<script type="text/javascript">
+		function reajustarSalario() {
+			let nome = prompt('Qual é o nome do funcionário ?')
+			let salario = prompt('Qual o salário do(a) ' + nome + ' ?') 
+			let porcentagem = prompt('O salário do(a) ' + nome + ' vai ser reajustado em qual porcentagem ? ')
+			let real = parseFloat(salario) * (parseFloat(porcentagem) / 100)
+			let total = parseFloat(salario) + parseFloat(real.toFixed(2))
+			let resultado4 = document.querySelector(".resultado4").innerHTML = nome + ' recebeu um aumento salarial !'
+			document.querySelector(".salario").innerHTML = 'O salário atual era R$ ' + salario
+			document.querySelector(".aumento").innerHTML = 'Com um aumento de ' + porcentagem + '% , o salário vai aumentar R$ ' + real.toFixed(2) + ' no próximo mês.'
+			document.querySelector(".total").innerHTML = 'E a partir daí , ' + nome + ' Vai passar a ganhar R$ ' + total
+		}
+	</script>
+	<br>
+	<br>
+	<hr>
+
+	<h1>Resolvendo Bhaskara</h1>
+
+	<section class="container">
+		<div class="conversor">
+			<button class="botaoS" onclick="calculandoBhaskara(prompt)">Calcular</button>
+			<h3 class="bhaskara">Considerando uma equação no formato <strong>ax<sup>2</sup> + bx + c = 0 </strong> , aperte o botão acima para calcular o valor de &Delta;</h3>
+			<div class="equacao"></div>
+			<div class="calculo"></div>
+			<div class="feito"></div>
+		</div>
+	</section>
+		
+
+	<script type="text/javascript">
+		function calculandoBhaskara() {
+			let a = prompt('Qual é o valor de a ?')
+			let b = prompt('Qual é o valor de b ?')
+			let c = prompt('Qual é o valor de c ?')
+			document.querySelector(".bhaskara").innerHTML = 'Resolvendo Bhaskara'
+			let equacao = document.querySelector(".equacao").innerHTML = 'A equação atual é <strong>' + a +' x<sup>2</sup> + ' + b + ' x + ' + c + ' = 0 </strong>'
+			let calculo = parseInt(b) * parseInt(b) - (4 * a * c)
+			let calculado = document.querySelector(".calculo").innerHTML = 'O calculo realizado será <strong>&Delta; = ' + b +'<sup>2</sup> - 4 * ' + a + ' * ' + c + '</strong>'
+			let feito = document.querySelector(".feito").innerHTML = 'O valor calculado foi <strong>&Delta;  = ' + calculo + '</strong>'
+			}	
+	</script>
+	<br>
+	<br>
+	<hr>
+
+	<h1>Ano Bissexto</h1>
+	<section class="container">
+		<div class="conversor">
+			<button class="botaoS" onclick="calcularAno(prompt)">Verificar</button>
+			<h3 class="bissexto">Informe um ano para saber se ele é bissexto</h3>
+			<div class="ano"></div>
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		function calcularAno() {
+			let ano = prompt('Qual é o ano que você quer analisar ?')
+			document.querySelector(".bissexto").innerHTML = 'Analisando o ano de ' + ano + '...'
+			if (ano % 4 === 0 && ano % 100 === 0 && ano % 400 === 0){
+				document.querySelector(".ano").innerHTML = 'O ano de ' + ano + ' <strong><span class="green" style="color: green">É BISSEXTO</span></strong> &#9989;'
+			}
+			else {
+				document.querySelector(".ano").innerHTML = 'O ano de ' + ano + ' <strong><span style="color: red">NÃO É BISSEXTO</span></strong> &#10060;'
+			}
+		}
+	</script>
+	<br>
+	<br>
+	<hr>
+
+	<h1>Preço Mudou</h1>
+
+	<section class="container">
+		<div class="conversor">
+			<button class="botaoS" onclick="mudancaDePreco(prompt)">Verificar</button>
+			<h3 class="mudou">Clique no botão acima para analisar a mudança de preço</h3>
+			<div class="analise"></div>	
+			<div class="caro-ou-barato"></div>	
+			<div class="quantos-reais"></div>	
+			<div class="percent"></div>	
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		function mudancaDePreco() {
+			let preco = prompt('Qual era o preço anterior do produto ?')
+			let atual = prompt('Qual o preço atual do produto ?')
+			document.querySelector(".mudou").innerHTML = 'Analisando os valores informados'
+			let analise = document.querySelector(".analise").innerHTML = 'O produto custava R$ ' + preco + ',00 e agora custa R$ ' + atual + ',00.'
+			if (preco < atual) {
+				document.querySelector(".caro-ou-barato").innerHTML = 'Hoje o produto está mais caro.'
+				let caro = atual - preco
+				document.querySelector(".quantos-reais").innerHTML = 'O preço subiu R$ ' + caro + ',00 em relação ao preço anterior'
+				let percent = (atual / preco - 1) * 100
+				document.querySelector(".percent").innerHTML = 'Uma variação de ' + percent.toFixed(2) +'% pra cima'
+		0	}
+			else {
+				document.querySelector(".caro-ou-barato").innerHTML = 'Hoje o produto está mais barato.'
+				let barato = preco - atual
+				document.querySelector(".quantos-reais").innerHTML = 'O preço caiu R$ ' + barato + ',00 em relação ao preço anterior'
+				let percent = (preco / atual - 1) * 100
+				document.querySelector(".percent").innerHTML = 'Uma variação de ' + percent.toFixed(2) +'% pra baixo'
+			}
+		}
+	</script>
+	<br>
+	<br>
+	<hr>
+
+	<h1>Situação do aluno</h1>
+
+	<section class="container">
+		<div class="conversor">
+			<button class="botaoS" onclick="calcularNota(prompt)">Entrar com as notas</button>
+			<h3 class="situacao">Clique no botão acima para informar as notas do aluno</h3>
+			<div class="nota"></div>
+			<div class="media"></div>
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		function calcularNota() {
+			let nome = prompt('Qual é o nome do aluno ?')
+			let notaA = parseFloat(prompt('Qual a primeira nota de ' + nome + ' ?'))
+			let notaB = parseFloat(prompt('Qual a segunda nota de ' + nome + ' ?'))
+			let soma = parseFloat(notaA + notaB)
+			let media = parseFloat(soma / 2)
+
+
+			if (media > 6) {
+				document.querySelector(".nota").innerHTML = 'Com as notas ' + notaA + ' e ' + notaB + ' , a <strong>média é ' + media.toFixed(1) + '</strong>'
+				document.querySelector(".media").innerHTML = 'Com média acima de 6,0 , o aluno está <strong class="green" style="color: green">APROVADO</strong>'
+				
+			}
+			else if (media >= 3 && media <= 6 ) {
+				document.querySelector(".nota").innerHTML = 'Com as notas ' + notaA + ' e ' + notaB + ' , a <strong>média é ' + media.toFixed(1) + '</strong>'
+				document.querySelector(".media").innerHTML = 'Com média entre de 3,0 e 6,0 , o aluno está em <strong  style="color: #fb8c00">RECUPERAÇÃO</strong>'
+			}
+			else if (media < 3) {
+				document.querySelector(".nota").innerHTML = 'Com as notas ' + notaA + ' e ' + notaB + ' , a <strong>média é ' + media.toFixed(1) + '</strong>'
+				document.querySelector(".media").innerHTML = 'Com média abaixo de 3,0 , o aluno está <strong class="red" style="color: red">REPROVADO</strong>'
+			}
+		}
+	</script>
+	<br>
+	<br>
+	<hr>
+</body>
+</html>
