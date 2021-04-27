@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teste</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			background: rgb(104, 102, 101);
+		}
+		h1 {
+			text-align: center;
+			color: rgba(177, 206, 13, 0.548);
+			font-size: 2.4rem;
+		}
+	.wraper{
+		background: rgb(14, 1, 26);
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-size: 1.5rem;
+		color: rgba(177, 206, 13, 0.548);
+		text-align: center;
+		padding-top: 20px;
+		margin: 0px auto;
+		top:50%;
+		left: 50%;
+		width: 700px;
+		height: 100vh;
+	}
+	#number {
+		border: none;
+		overflow: hidden;
+		height: 25px;
+	}
+	#gerar , #limpar {
+		height: 25px;
+		font-size: 1.1rem;
+	}
+	.resultado {
+		height: 70%;
+		width: 80%;
+		background: white;
+		margin: 10px auto;
+	}
+	</style>		
+</head>
+<body>
+
+	<header>
+		<h1>Gerador de Tabuada</h1>
+	</header>
+	<section class="wraper">	
+		<label>Valor da tabuada</label>
+		<input type="number" id="number">
+		<input type="button" id="gerar" value="Gerar" onclick="gerar()">
+		<input type="button" id="limpar" value="limpar" onclick="limpar()">
+		<div class="resultado"></div>
+	</section>
+
+	
+
+	
+<script type="text/javascript">
+	function gerar() {
+		
+		let num1 = document.querySelector("#number").value
+		let resultado = document.querySelector(".resultado")
+		let tab = ""
+		let num = Number(num1)
+		
+		if (num === 0 || num === "") {
+			alert('Digite um número')
+		}
+		else{
+				
+				for (let i = 1; i <= 10; i++) {
+					tab += i + ' X ' + num + ' = ' + i*num + '<br>'
+				}
+			}
+				
+			resultado.innerHTML = tab
+	}
+		
+	function limpar() {
+		document.querySelector("#number").value = ""
+		document.querySelector(".resultado") = ""
+	}
+
+	
+</script>
+</body>
+</html
