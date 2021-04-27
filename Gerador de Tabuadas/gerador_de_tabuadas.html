@@ -6,40 +6,81 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
 		body {
-			background: rgb(104, 102, 101);
+			background: rgb(0, 0, 0);
+			font-family: Georgia, 'Times New Roman', Times, serif;
 		}
 		h1 {
 			text-align: center;
-			color: rgba(177, 206, 13, 0.548);
-			font-size: 2.4rem;
+			color: yellow;
+			font-size: 2.6rem;
+			font-weight: bolder;
 		}
-	.wraper{
-		background: rgb(14, 1, 26);
-		font-family: Verdana, Geneva, Tahoma, sans-serif;
-		font-size: 1.5rem;
-		color: rgba(177, 206, 13, 0.548);
-		text-align: center;
-		padding-top: 20px;
-		margin: 0px auto;
-		top:50%;
-		left: 50%;
-		width: 700px;
-		height: 100vh;
-	}
-	#number {
-		border: none;
-		overflow: hidden;
-		height: 25px;
-	}
-	#gerar , #limpar {
-		height: 25px;
-		font-size: 1.1rem;
-	}
-	.resultado {
-		height: 70%;
+		input {
+			border-radius: 3px;
+		}
+		p {
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			font-size: 0.8rem;
+			font-weight: bolder;
+			color:  yellow;
+		}
+		p:nth-child(2) {
+			font-size: 0.6rem;
+		}
+		.wraper{
+			background: rgba(67, 66, 68, 0.247);
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			font-size: 1.3rem;
+			font-weight: bolder;
+			color:  yellow;
+			text-align: center;
+			padding-top: 20px;
+			margin: 20px auto;
+			top:50%;
+			left: 50%;
+			width: 700px;
+			height: 73vh;
+		}
+		.container {
+			display: flex;
+			justify-content: space-around;
+			padding: 0px 30px;
+		}
+		#number {
+			font-size: 1.1rem;
+			font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+			background-color: rgb(97, 96, 96);
+			color: rgb(37, 37, 37);
+			border: none;
+			height: 23px;
+			width: 100px;
+			text-align: center;
+		}
+		#number:focus {
+			border:0  none;
+			outline-style: none;
+		}
+		#gerar , #limpar {
+			height: 25px;
+			width: 90px;
+			font-size: 1.1rem;
+			font-weight: bold;
+			background-color: yellow;
+			color: black;
+			border: none;
+			border-radius: 3px;
+			cursor: pointer;
+		}
+		#gerar:hover , #limpar:hover {
+			background-color: black;
+			color: yellow;
+		}
+		.resultado {
+		height: 67%;
 		width: 80%;
-		background: white;
-		margin: 10px auto;
+		background: rgb(12, 12, 12);
+		margin: 30px auto;
+		padding-top: 30px;
 	}
 	</style>		
 </head>
@@ -56,9 +97,6 @@
 		<div class="resultado"></div>
 	</section>
 
-	
-
-	
 <script type="text/javascript">
 	function gerar() {
 		
@@ -67,11 +105,13 @@
 		let tab = ""
 		let num = Number(num1)
 		
-		if (num === 0 || num === "") {
+		if (num === "") {
 			alert('Digite um número')
 		}
+		if (num === 0) {
+			alert('Digite um  número maior que 0 (zero)')
+		}
 		else{
-				
 				for (let i = 1; i <= 10; i++) {
 					tab += i + ' X ' + num + ' = ' + i*num + '<br>'
 				}
@@ -81,10 +121,10 @@
 	}
 		
 	function limpar() {
-		document.querySelector("#number").value = ""
-		document.querySelector(".resultado") = ""
+		/*document.querySelector("#number").value = ""*/
+		location.reload()
+		
 	}
-
 	
 </script>
 </body>
