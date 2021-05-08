@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+    <title>Fernando de Noronha</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+          // The location of Uluru
+          const uluru = { lat: -25.344, lng: 131.036 };
+          // The map, centered at Uluru
+          const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 4,
+            center: uluru,
+          });
+          // The marker, positioned at Uluru
+          const marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+          });
+        }
+      </script>
+</head>
+<body>
+
+    <header id="topo">
+        <nav id="menu">
+            <div class="logo">DevTechWeb Viagens</div>
+            
+            <ul>
+                <li><a href="#menu">Home</a></li>
+                <li><a href="#pacotes">Pacotes</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contatos">Contato</a></li>
+            </ul>
+        </nav>
+
+        <section id="capa">
+            <hi class="titulo">Fernando de Noronha</hi>
+            <p class="descricao">Considerado Patrimônio Mundial da UNESCO, é uns dos arquipélagos mais lindos do mundo , com natureza exuberante , praias paradisíacas e ecoturismo único. Escolha seu pacote e viva essa experiência.</p>
+            <button>Saiba mais</button>
+        </section>
+    </header>
+
+    <main id="conteudo">
+        <section id="pacotes">
+            <div class="pacotes-titulo">
+                <h2>Conheça nossos pacotes</h2>
+            </div>
+            <div class="cards-pacotes">
+                <div class="cards">
+                    <div class="card-tag-topo">
+                        <p>Miami</p>
+                    </div>
+                    <div class="card-tag-bottom">
+                        <p>R$5.800,00</p>
+                    </div>
+                    <img class="cards-img" src="Imagens/miami.jpg" alt="Miami">
+                    <div class="content-card">
+                        <h2>Pacote 5 noites hotel premium</h2>
+                        <ul>
+                            <li><i data-feather="coffee"></i>Café da manhã incluso</li>
+                            <li><i data-feather="wifi"></i>Wi-fi</li>
+                            <li><i data-feather="check-circle"></i>Pet-friendly</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-tag-topo">
+                        <p>Hawaii</p>
+                    </div>
+                    <div class="card-tag-bottom">
+                        <p>R$4.800,00</p>
+                    </div>
+                    <img class="cards-img" src="Imagens/hawaii.jpg" alt="hawaii">
+                    <div class="content-card">
+                        <h2>Pacote 5 noites hotel premium</h2>
+                        <ul>
+                            <li><i data-feather="coffee"></i>Café da manhã incluso</li>
+                            <li><i data-feather="wifi"></i>Wi-fi</li>
+                            <li><i data-feather="check-circle"></i>Pet-friendly</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card-tag-topo">
+                        <p>Caribe</p>
+                    </div>
+                    <div class="card-tag-bottom">
+                        <p>R$3.800,00</p>
+                    </div>
+                    <img class="cards-img" src="Imagens/caribe.jpg" alt="caribe">
+                    <div class="content-card">
+                        <h2>Pacote 5 noites hotel premium</h2>
+                        <ul>
+                            <li><i data-feather="coffee"></i>Café da manhã incluso</li>
+                            <li><i data-feather="wifi"></i>Wi-fi</li>
+                            <li><i data-feather="check-circle"></i>Pet-friendly</li>
+                        </ul>
+                    </div> 
+                </div>
+                <div class="cards">
+                    <div class="card-tag-topo">
+                        <p>Austrália</p>
+                    </div>
+                    <div class="card-tag-bottom">
+                        <p>R$3.200,00</p>
+                    </div>
+                    <img class="cards-img" src="Imagens/australia.jpg" alt="Australia">
+                    <div class="content-card">
+                        <h2>Pacote 5 noites hotel premium</h2>
+                        <ul>
+                            <li><i data-feather="coffee"></i>Café da manhã incluso</li>
+                            <li><i data-feather="wifi"></i>Wi-fi</li>
+                            <li><i data-feather="check-circle"></i>Pet-friendly</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos">
+            <div class="servicos-titulo">
+                <h2>Serviços</h2>
+            </div>
+            <div class="servicos-container">
+                <div class="cards-servicos">
+                    <i data-feather="map"></i>
+                        <h3>Tours guiados</h3>
+                        <p>Os tours guiados são passeios que são realizados com auxílio de um guia, que além de dar informações sobre o local, vai nos conduzir ao longo do trajeto.</p>
+                        <button>Saiba mais</button>
+                </div>
+                <div class="cards-servicos">
+                    <i data-feather="camera"></i>
+                        <h3>Fotografia profissional</h3>
+                        <p>Nossos fotógrafos são acostumados a registrar os melhores momentos da viagem para que você aproveite a paisagem sem se preocupar.</p>
+                        <button>Saiba mais</button>
+                </div>
+                <div class="cards-servicos">
+                    <i data-feather="navigation"></i>
+                        <h3>Aluguel de veículo</h3>
+                        <p>Para os clientes que preferem explorar o ambiente sozinhos e curtem a liberdade, oferecemos o serviço de aluguel de veículos com preços super em conta.</p>
+                        <button>Saiba mais</button>
+                </div>
+            </div>   
+        </section>
+
+        <section class="contato">
+            <div class="contato-card">
+                <h2>Entre em contato</h2>
+                <ul>
+                    <li><i data-feather="map-pin"></i>Rua Pedro Álvares Cabral , 1500</li>
+                    <li><i data-feather="mail"></i>devtechweb@outlook.com</li>
+                    <li><i data-feather="phone"></i>+55 (11) 994570000</li>
+                </ul>
+            </div>
+            <div id="map">
+
+            </div>
+        </section>
+    </main>
+    <script>
+        feather.replace()
+      </script>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+    src="https://maps.googleapis.com/maps/api/js?&callback=initMap&libraries=&v=weekly" async>
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    background-color: rgb(245, 242, 238);
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+#topo {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-image: url(Imagens/bgcapa2.jpg);
+    background-color: #cccccc;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;	
+    border-radius: 24px 0px;
+    
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: rgba(108, 177, 18, 0.952);
+   
+} 
+    
+#menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    
+
+}
+
+ul li {
+    display:inline;
+    margin: 30px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgba(108, 177, 18, 0.952);
+}
+
+a:hover {
+    background-color: rgb(181, 252, 246);
+    padding: 8px 15px;
+    color:rgba(108, 177, 18, 0.952);
+    border-radius: 8px;
+}
+
+#capa {
+    display: block;
+    margin:100px auto;
+    width: 720px;
+   
+}
+
+.titulo {
+    font-size: 4rem;
+    padding: 10px 20px;
+    margin: 20px auto;
+    font-weight: bolder;
+    color: rgb(181, 252, 246);
+}
+
+.descricao {
+    text-align: center;
+    margin: 20px 60px;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    color: rgb(181, 252, 246);
+}
+
+button {
+    padding: 10px 15px;
+    background-color: rgba(108, 177, 18, 0.952);
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 0.9rem;
+    color: rgb(245, 242, 238);
+    margin: 0px 300px;
+    cursor: pointer;
+}
+
+button:hover {
+    padding: 13px 18px;
+    background-color:rgb(181, 252, 246);
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(108, 177, 18, 0.952);
+}
+
+#pacotes {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.pacotes-titulo {
+    margin: 30px;
+    padding: 30px 10px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.pacotes-titulo h2 {
+    position: absolute;
+    /*left: 46%;
+    top: 7%;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;  
+    padding: 3px 5px;
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: bolder;
+    background-color: rgba(108, 177, 18, 0.952);
+    color: rgb(181, 252, 246);
+    border-radius: 8px;
+}
+
+.cards-pacotes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 510px;
+    background-color: rgb(237, 242, 245);
+    flex-wrap: wrap;
+}
+
+.cards {
+    width: 250px;
+    height: 350px;
+    border-radius: 24px 0px;
+    text-align: center;
+    background-color: rgb(222, 231, 231);
+    box-shadow:5px 5px 5px 0 rgb(142, 145, 144);
+    position: relative;
+}
+
+.cards .cards-img {
+   
+    width: 250px;
+    height: 200px;
+    border-radius: 24px 0 0 0;
+}
+
+.cards .content-card h2   {
+    font-size: 1rem;
+    font-weight: bolder;
+    color: rgba(108, 177, 18, 0.952);   ;
+    height: 40px;
+    margin: 3px auto;
+}
+
+.cards .content-card ul {
+    text-align: left;
+    margin-left: -5px;
+    margin-top: -2px;
+    
+}
+
+.cards .content-card ul li {
+   display: block;
+   font-size: 0.7rem;
+   font-weight: lighter;
+   margin-top: -16px;
+}
+
+.cards .content-card  li svg {
+    font-size: 0.5rem;
+    font-weight: lighter;
+    margin-right: 10px;
+    margin-bottom: -3px;
+ }
+
+
+ .card-tag-topo p {
+     position: absolute;
+     background-color: rgba(108, 177, 18, 0.952);
+     right: 0;
+     top: 5px;
+     padding: 3px;
+     color: rgb(237, 242, 245);
+     border-radius: 5px 0 0 5px;
+ }
+
+ .card-tag-bottom p {
+    position: absolute;
+    font-size: 0.9rem;
+    background-color: rgb(237, 242, 245);
+    left: 0;
+    bottom: 154px;
+    padding: 3px;
+    color: rgba(108, 177, 18, 0.952);
+    border-radius: 0 5px 5px 0px;
+}
+
+#servicos {
+    display: block;
+    padding: 10px 0;
+    justify-content: space-around;
+    position: relative;
+    background-color: rgb(233, 225, 225);
+}
+
+.servicos-titulo {
+    margin: 30px;
+    padding: 30px 10px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.servicos-titulo h2 {
+    position: absolute;
+    /*left: 46%;
+    top: 7%;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;  
+    padding: 3px 5px;
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: bolder;
+    background-color: rgba(108, 177, 18, 0.952);
+    color: rgb(181, 252, 246);
+    border-radius: 8px;
+}
+
+.servicos-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(233, 225, 225);
+    padding: -20px 0;
+    flex-wrap: wrap;
+}
+
+.cards-servicos {
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 20px auto;
+    flex-wrap: wrap;
+}
+
+.cards-servicos svg {
+    width: 60px;
+    height: 60px;
+    margin-top: 30px;
+    transition: all 1s;
+}
+
+.cards-servicos svg:hover {
+    width: 70px;
+    height: 70px;
+    margin-top: 30px;
+    font-weight: bolder;
+    color: rgba(108, 177, 18, 0.952);
+    cursor: pointer;
+}
+
+.cards-servicos h3 {
+  font-weight: bold;
+}
+
+.cards-servicos p {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: rgb(94, 94, 94);
+  }
+
+.cards-servicos button {
+    padding: 10px 15px;
+    background-color: rgba(108, 177, 18, 0.952);
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 0.9rem;
+    color: rgb(245, 242, 238);
+    margin: 0;
+    cursor: pointer;
+}
+
+.cards-servicos button:hover {
+    padding: 12px 17px;
+    background-color: rgb(245, 242, 238);
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    color: rgba(108, 177, 18, 0.952);
+    margin: 0;
+    cursor: pointer;
+}
+
+.contato {
+    padding: 60px;
+    position: relative;
+}
+
+.contato .contato-card {
+    width: 350px;
+    height: 300px;
+    background-color: rgb(224, 210, 210);
+    position: absolute;
+    z-index: 1;
+    top: calc(50% - 150px);
+    left: calc(20% - 175px);
+    border-radius: 8px;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.contato .contato-card h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: rgba(108, 177, 18, 0.952);
+    text-align: center;
+    margin: 20px auto;
+    
+}
+
+.contato .contato-card ul {
+    text-align: left;
+    margin-top: 8px;
+}
+
+.contato .contato-card ul li {
+   display: block;
+   font-size: 0.9rem;
+   font-weight: bolder;
+  padding: 8px 0;
+}
+
+.contato .contato-card  li svg {
+    font-size: 0.5rem;
+    font-weight: lighter;
+    margin-right: 10px;
+    margin-bottom: -3px;
+ }
+
+#map {
+    height: 400px;
+    width: 100%;
+    background-color: white;
+  }
+
+
+/* Responsive */
+
+@media (max-width:767px) {
+    
+}
+
+@media (max-width:480px) {
+        body {
+            margin-bottom: 55px;
+        }
+    header nav ul {
+        position: fixed;
+        padding: 0;
+        margin: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 55px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+        font-weight: bold;
+        color: rgba(108, 177, 18, 0.952);
+    }
+
+    header nav p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contato {
+        padding: 30px 0;
+    }
+
+    .contato .contato-card {
+        position: static;
+        margin: 40px auto;
+    }
+}
+
+@media (min-width:768) and (max-width:979px) {
+    
+}
+
+@media (min-width:1200px) {
+    
+}
